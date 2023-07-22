@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { CreateDateColumn, DeleteDateColumn, PrimaryGeneratedColumn, UpdateDateColumn } from "typeorm";
 
 export abstract class BaseEntity {

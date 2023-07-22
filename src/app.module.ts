@@ -15,7 +15,7 @@ import { UserEntity } from './users/user.entity';
       password: '',
       database: 'nestjs',
       entities: [UserEntity],
-      logging: 'all',
+      // logging: 'all',
       synchronize: true,
     }),
     UsersModule,

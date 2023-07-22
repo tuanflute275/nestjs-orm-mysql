@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Injectable } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
 import { UserEntity } from "./user.entity";
@@ -36,10 +35,10 @@ export class UserService {
         return plainToInstance(UserDto, foundUser, {excludeExtraneousValues: true});
     }
 
-    // async findAll(): Promise<UserDto> {
-    //     const allUser = await this.userRepository.find();
-    //     return plainToInstance(UserDto, allUser, {excludeExtraneousValues: true})
-    // }
+     findAll() {
+        const allUser =  this.userRepository.find();
+        return allUser;
+    }
 
     async deleteById(id: string):Promise<{result: string}> {
         await this.userRepository.softDelete(id);

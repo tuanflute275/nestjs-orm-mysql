@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Body, Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
 import { UserDto } from "./user.dto";
 import { UserService } from "./user.service";
@@ -24,10 +23,10 @@ export class UserController {
         return this.userService.findOne(id);
     }
 
-    // @Get()
-    // getAllUser() {
-    //     return this.userService.findAll()
-    // }
+    @Get()
+    getAllUser() {
+        return this.userService.findAll()
+    }
 
     @Delete(':id')
     deleteUser(@Param('id') id: string) {
